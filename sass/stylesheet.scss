@@ -1,0 +1,22 @@
+body {
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(222, 205, 162, 1);
+  font-family: "Lucida Console", Monaco, monospace;
+
+  .row {
+    width: 70%;
+    display: flex;
+    margin: auto;
+
+    h1 {
+      padding: 40px;
+    }
+
+    .column {
+      padding: 10px;
+      margin: auto;
+    }
+  }
+}
