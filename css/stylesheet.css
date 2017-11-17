@@ -1,7 +1,7 @@
 body {
   height: 100%;
   width: 100%;
-  background-color: #decda2;
+  background-color: #ded8c9;
   font-family: "Lucida Console", Monaco, monospace; }
   body .row {
     width: 70%;
@@ -12,3 +12,5 @@ body {
     body .row .column {
       padding: 10px;
       margin: auto; }
+      body .row .column :hover {
+        background-color: #ac9d77; }

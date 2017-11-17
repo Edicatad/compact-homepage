@@ -2,7 +2,7 @@ body {
   height: 100%;
   width: 100%;
 
-  background-color: rgba(222, 205, 162, 1);
+  background-color: rgba(222, 216, 201, 1);
   font-family: "Lucida Console", Monaco, monospace;
 
   .row {
@@ -17,6 +17,10 @@ body {
     .column {
       padding: 10px;
       margin: auto;
+
+      :hover {
+        background-color: rgba(172, 157, 119, 1);
+      }
     }
   }
 }
