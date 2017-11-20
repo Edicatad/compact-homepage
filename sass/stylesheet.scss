@@ -1,5 +1,5 @@
 // Variables
-$list-padding: 10px;
+$list-padding: 15px;
 $row-width: 60%;
 
 // Sass mixins
@@ -25,44 +25,57 @@ body {
   justify-content: space-between;
   margin: auto;
 
-  //DEBUG
-  background-color: green;
-
   h1 {
     padding: 40px;
-
-    //DEBUG
-    background-color:  blue;
   }
 
   .column {
     padding: $list-padding;
-
-    //DEBUG
-    background-color: red;
+    flex-grow: 1;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out ;
+    -ms-transition: 0.1s ease-out ;
+    -o-transition: 0.1s ease-out ;
+    transition: 0.1s ease-out ;
 
     span:after {
       content: attr(data-menu-type) "/";
     }
 
     ul {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      visibility: hidden;
+      opacity: 0;
       padding-left: 0;
-      @include calc("width", "#{$row-width} - #{$list-padding}");
+      width: $row-width;
+      -webkit-transition: 0.1s ease-out;
+      -moz-transition: 0.1s ease-out ;
+      -ms-transition: 0.1s ease-out ;
+      -o-transition: 0.1s ease-out ;
+      transition: 0.1s ease-out ;
 
       &.sub{
         position: absolute;
         left: 20%;
         margin: $list-padding 0 0;
-        padding: $list-padding ($list-padding/2);
 
-        //DEBUG
-        background-color: darkgoldenrod;
+        background-color: rgba(172, 157, 119, 1);
       }
 
-      li {
+      a {
+        min-width: 25%;
         list-style-type: none;
-        padding: $list-padding;
+        padding: $list-padding 0;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+        -webkit-transition: 0.1s ease-out;
+        -moz-transition: 0.1s ease-out ;
+        -ms-transition: 0.1s ease-out ;
+        -o-transition: 0.1s ease-out ;
+        transition: 0.1s ease-out ;
       }
     }
 
@@ -70,10 +83,10 @@ body {
       background-color: rgba(172, 157, 119, 1) !important;
 
       ul {
-        display: flex;
-        justify-content: space-evenly;
+        opacity: 1;
+        visibility: visible;
 
-        li:hover {
+        a:hover {
           background-color: white;
         }
       }
