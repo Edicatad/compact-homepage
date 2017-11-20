@@ -1,25 +1,81 @@
+// Variables
+$list-padding: 10px;
+$row-width: 60%;
+
+// Sass mixins
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+  #{$key}: -moz-calc(#{$value});
+  #{$key}: calc(#{$value});
+}
+
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
 
   background-color: rgba(222, 216, 201, 1);
   font-family: "Lucida Console", Monaco, monospace;
+}
 
-  .row {
-    width: 70%;
-    display: flex;
-    margin: auto;
+.row {
+  width: $row-width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
 
-    h1 {
-      padding: 40px;
+  //DEBUG
+  background-color: green;
+
+  h1 {
+    padding: 40px;
+
+    //DEBUG
+    background-color:  blue;
+  }
+
+  .column {
+    padding: $list-padding;
+
+    //DEBUG
+    background-color: red;
+
+    span:after {
+      content: attr(data-menu-type) "/";
     }
 
-    .column {
-      padding: 10px;
-      margin: auto;
+    ul {
+      display: none;
+      padding-left: 0;
+      @include calc("width", "#{$row-width} - #{$list-padding}");
 
-      :hover {
-        background-color: rgba(172, 157, 119, 1);
+      &.sub{
+        position: absolute;
+        left: 20%;
+        margin: $list-padding 0 0;
+        padding: $list-padding ($list-padding/2);
+
+        //DEBUG
+        background-color: darkgoldenrod;
+      }
+
+      li {
+        list-style-type: none;
+        padding: $list-padding;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(172, 157, 119, 1) !important;
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+
+        li:hover {
+          background-color: white;
+        }
       }
     }
   }
