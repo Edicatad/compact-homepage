@@ -10,35 +10,53 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: auto;
-  background-color: green; }
+  margin: auto; }
   .row h1 {
-    padding: 40px;
-    background-color: blue; }
+    padding: 40px; }
   .row .column {
-    padding: 10px;
-    background-color: red; }
+    padding: 15px;
+    flex-grow: 1;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -ms-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+    transition: 0.1s ease-out; }
     .row .column span:after {
       content: attr(data-menu-type) "/"; }
     .row .column ul {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      visibility: hidden;
+      opacity: 0;
       padding-left: 0;
-      width: -webkit-calc(60% - 10px);
-      width: -moz-calc(60% - 10px);
-      width: calc(60% - 10px); }
+      width: 60%;
+      -webkit-transition: 0.1s ease-out;
+      -moz-transition: 0.1s ease-out;
+      -ms-transition: 0.1s ease-out;
+      -o-transition: 0.1s ease-out;
+      transition: 0.1s ease-out; }
       .row .column ul.sub {
         position: absolute;
         left: 20%;
-        margin: 10px 0 0;
-        padding: 10px 5px;
-        background-color: darkgoldenrod; }
-      .row .column ul li {
+        margin: 15px 0 0;
+        background-color: #ac9d77; }
+      .row .column ul a {
+        min-width: 25%;
         list-style-type: none;
-        padding: 10px; }
+        padding: 15px 0;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+        -webkit-transition: 0.1s ease-out;
+        -moz-transition: 0.1s ease-out;
+        -ms-transition: 0.1s ease-out;
+        -o-transition: 0.1s ease-out;
+        transition: 0.1s ease-out; }
     .row .column:hover {
       background-color: #ac9d77 !important; }
       .row .column:hover ul {
-        display: flex;
-        justify-content: space-evenly; }
-        .row .column:hover ul li:hover {
+        opacity: 1;
+        visibility: visible; }
+        .row .column:hover ul a:hover {
           background-color: white; }
