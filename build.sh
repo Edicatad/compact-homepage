@@ -12,10 +12,9 @@ MENUS=(
 # Unlisted menus or menus without contents are empty on the page but the item is created
 # Usage: "<link name>|<link URL>"
 dev=(
-    "GitHub|http://github.com/edicata"
+    "GitHub|http://github.com/edicatad"
     "AWS|http://console.aws.amazon.com/"
     "StackSPACEOverflow|http://stackoverflow.com"
-    "Kerrn|http://kerrn.sterrk.nl"
     "Asana|http://app.asana.com"
 )
 entertainment=(
