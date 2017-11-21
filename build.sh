@@ -38,6 +38,8 @@ rpg=(
     "Roll20|http://roll20.net"
     "RPGSPACESubreddit|http://rpg.reddit.com"
     "4chanSPACETrove|https://rpg.rem.uz/"
+    "Donjon'sSPACEGenerators|https://donjon.bin.sh/"
+    "ChaoticSPACEShinySPACEGenerators|http://chaoticshiny.com"
 )
 
 # Copy the empty index file from the html folder
