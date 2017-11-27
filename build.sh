@@ -16,6 +16,7 @@ dev=(
     "AWS|http://console.aws.amazon.com/"
     "StackSPACEOverflow|http://stackoverflow.com"
     "Asana|http://app.asana.com"
+    "Flaticon|http://flaticon.com"
 )
 entertainment=(
     "Reddit|http://reddit.com"
@@ -32,6 +33,7 @@ news=(
     "FedoraSPACEMagazine|http://fedoramagazine.org"
     "FedoraSPACESubreddit|http://fedora.reddit.com"
     "LinuxSPACESubreddit|http://linux.reddit.com"
+    "FOSSSPACEPost|http://fosspost.org"
 )
 rpg=(
     "Roll20|http://roll20.net"
