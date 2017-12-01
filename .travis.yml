@@ -1,6 +1,6 @@
 install: true
 
-build: ./build.sh
+script: ./build.sh
 
 deploy:
     provider: pages
