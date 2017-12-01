@@ -17,6 +17,7 @@ dev=(
     "StackSPACEOverflow|http://stackoverflow.com"
     "Asana|http://app.asana.com"
     "Flaticon|http://flaticon.com"
+    "CommandlineFu|http://commandlinefu.com"
 )
 entertainment=(
     "Reddit|http://reddit.com"
