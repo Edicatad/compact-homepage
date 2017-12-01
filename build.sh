@@ -18,6 +18,7 @@ dev=(
     "Asana|http://app.asana.com"
     "Flaticon|http://flaticon.com"
     "CommandlineFu|http://commandlinefu.com"
+    "TravisSPACECI|https://travis-ci.org/profile/Edicatad"
 )
 entertainment=(
     "Reddit|http://reddit.com"
