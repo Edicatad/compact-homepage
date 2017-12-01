@@ -1,3 +1,6 @@
+git:
+    depth: 3 # No intention of performing git-commands in the build
+
 install: true
 
 script: ./build.sh
