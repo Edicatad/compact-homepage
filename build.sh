@@ -23,10 +23,11 @@ dev=(
 entertainment=(
     "Reddit|http://reddit.com"
     "YouTube|http://youtube.com"
+    "UnixSPACEPorn|http://unixporn.reddit.com"
+    "AvE|https://www.youtube.com/user/arduinoversusevil/videos"
     "Let'sSPACEPlay|https://www.youtube.com/user/LetsPlay/videos"
     "AchievementSPACEHunter|https://www.youtube.com/user/AchievementHunter/videos"
     "ArtisanSPACEVideos|http://artisanvideos.reddit.com"
-    "UnixSPACEPorn|http://unixporn.reddit.com"
 )
 news=(
     "Bloomberg|http://bloomberg.com"
