@@ -21,6 +21,7 @@ dev=(
     "TravisSPACECI|https://travis-ci.org/profile/Edicatad"
 )
 entertainment=(
+    "TableSPACETitans|http://tabletitans.com/"
     "Reddit|http://reddit.com"
     "YouTube|http://youtube.com"
     "UnixSPACEPorn|http://unixporn.reddit.com"
