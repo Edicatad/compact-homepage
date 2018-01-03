@@ -1,62 +1,73 @@
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background-color: #ded8c9;
-  font-family: "Lucida Console", Monaco, monospace; }
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #ded8c9;
+    font-family: "Lucida Console", Monaco, monospace; 
+}
 
 .row {
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: auto; }
-  .row h1 {
-    padding: 40px; }
-  .row .column {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto; 
+}
+
+.row h1 {
+    padding: 40px; 
+}
+
+.row .column {
     padding: 15px;
     flex-grow: 1;
     -webkit-transition: 0.1s ease-out;
     -moz-transition: 0.1s ease-out;
     -ms-transition: 0.1s ease-out;
     -o-transition: 0.1s ease-out;
-    transition: 0.1s ease-out; }
-    .row .column span:after {
-      content: attr(data-menu-type) "/"; }
-    .row .column ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      visibility: hidden;
-      opacity: 0;
-      padding-left: 0;
-      width: 60%;
-      -webkit-transition: 0.1s ease-out;
-      -moz-transition: 0.1s ease-out;
-      -ms-transition: 0.1s ease-out;
-      -o-transition: 0.1s ease-out;
-      transition: 0.1s ease-out; }
-      .row .column ul.sub {
-        position: absolute;
-        left: 20%;
-        margin: 15px 0 0;
-        background-color: #ac9d77; }
-      .row .column ul a {
-        min-width: 25%;
-        list-style-type: none;
-        padding: 15px 0;
-        text-align: center;
-        text-decoration: none;
-        color: #000;
-        -webkit-transition: 0.1s ease-out;
-        -moz-transition: 0.1s ease-out;
-        -ms-transition: 0.1s ease-out;
-        -o-transition: 0.1s ease-out;
-        transition: 0.1s ease-out; }
-    .row .column:hover {
-      background-color: #ac9d77 !important; }
-      .row .column:hover ul {
-        opacity: 1;
-        visibility: visible; }
-        .row .column:hover ul a:hover {
-          background-color: white; }
+    transition: 0.1s ease-out; 
+}
+
+.row .column ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 0;
+    width: 60%;
+    visibility:hidden;
+}
+
+.row .active-column ul {
+    visibility:visible !important;
+}
+
+.row .column ul.sub {
+    position: absolute;
+    left: 20%;
+    margin: 15px 0 0;
+    background-color: #ac9d77; 
+}
+
+.row .column ul a {
+    min-width: 25%;
+    list-style-type: none;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -ms-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+    transition: 0.1s ease-out; 
+}
+
+.active-column {
+    background-color: #ac9d77 !important; 
+    z-index:1;
+    visibility:visible !important;
+}
+
+.row .column:hover ul a:hover {
+    background-color: white; 
+}
