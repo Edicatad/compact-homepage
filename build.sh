@@ -8,6 +8,9 @@ MENUS=(
     dev
 )
 
+# This is the menu that starts expanded
+START='entertainment'
+
 # Menu contents go here, in reverse order
 # Unlisted menus or menus without contents are empty on the page but the item is created
 # Usage: "<link name>|<link URL>"
@@ -52,10 +55,15 @@ rpg=(
 cp -v html/index.html index.html
 for i in "${MENUS[@]}"
 do
+    if [ "$i" = "${START}" ]; then
+        COLUMNTYPE='active-column'
+    else
+        COLUMNTYPE=''
+    fi
     # Add the menu columns
     sed -i.bak '
         /menus/ a\
-\        <div id="column" class="column" onClick="clickColumn(this)">\
+\        <div id="column" class="column '$COLUMNTYPE'" onClick="clickColumn(this)">\
 \            <span class="menu" data-menu-type="'$i'">'$i'</span>\
 \            <ul class="sub '$i'">\
 \            </ul>\
