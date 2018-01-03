@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>.index</title>
+    <title>~/</title>
     <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="row title">
-        <h1>/.index/</h1>
+      <h1>~/</h1>
     </div>
     <div class="row menus">
     </div>
-</body>
+    <script>
+function clickColumn(el){
+  var columns = el.parentNode.children;
+  for (var i = 0; i < columns.length; i++){
+    columns[i].classList.remove("active-column");
+  }
+  el.classList.add("active-column");
+}
+    </script>
+  </body>
 </html>
