@@ -55,8 +55,8 @@ do
     # Add the menu columns
     sed -i.bak '
         /menus/ a\
-\        <div class="column">\
-\            <span class="menu" data-menu-type="'$i'"></span>\
+\        <div id="column" class="column" onClick="clickColumn(this)">\
+\            <span class="menu" data-menu-type="'$i'">'$i'</span>\
 \            <ul class="sub '$i'">\
 \            </ul>\
 \        </div>
