@@ -2,7 +2,8 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: #ded8c9;
+    background-color: #101010;
+    color: #CCCCCC;
     font-family: "Lucida Console", Monaco, monospace; 
 }
 
@@ -19,7 +20,9 @@ body {
 }
 
 .row .column {
-    padding: 15px;
+    min-width:25%;
+    padding: 15px 0;
+    text-align: center;
     flex-grow: 1;
     -webkit-transition: 0.1s ease-out;
     -moz-transition: 0.1s ease-out;
@@ -45,7 +48,7 @@ body {
     position: absolute;
     left: 20%;
     margin: 15px 0 0;
-    background-color: #ac9d77; 
+    background-color: #303030; 
 }
 
 .row .column ul a {
@@ -54,7 +57,7 @@ body {
     padding: 15px 0;
     text-align: center;
     text-decoration: none;
-    color: #000;
+    color: #CCCCCC;
     -webkit-transition: 0.1s ease-out;
     -moz-transition: 0.1s ease-out;
     -ms-transition: 0.1s ease-out;
@@ -63,11 +66,12 @@ body {
 }
 
 .active-column {
-    background-color: #ac9d77 !important; 
+    background-color: #303030 !important; 
     z-index:1;
     visibility:visible !important;
 }
 
 .row .column:hover ul a:hover {
-    background-color: white; 
+    background-color: #d0d0d0; 
+    color: #101010;
 }
