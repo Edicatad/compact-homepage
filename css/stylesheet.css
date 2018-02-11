@@ -1,77 +1,73 @@
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     margin: 0;
-    background-color: #101010;
+    background-color: #ffbb70;
     color: #CCCCCC;
     font-family: "Lucida Console", Monaco, monospace; 
+    text-transform: lowercase;
 }
 
-.row {
-    width: 60%;
+.fr {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto; 
+    flex-direction: row;
 }
 
-.row h1 {
-    padding: 40px; 
-}
-
-.row .column {
-    min-width:25%;
-    padding: 15px 0;
-    text-align: center;
-    flex-grow: 1;
-    -webkit-transition: 0.1s ease-out;
-    -moz-transition: 0.1s ease-out;
-    -ms-transition: 0.1s ease-out;
-    -o-transition: 0.1s ease-out;
-    transition: 0.1s ease-out; 
-}
-
-.row .column ul {
+.fc {
     display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #454545;
+    -webkit-box-shadow: 0 0 10px 2px black;
+    -moz-box-shadow:    0 0 10px 2px black;
+    box-shadow:         0 0 10px 2px black;
+}
+
+.title {
+    margin: 15px 25px;
+}
+
+.menus {
+    margin: 0 25px;
+}
+
+.category-wrapper {
+    padding: 1rem 0;
+}
+
+.heading {
+    min-width: 200px;
+    width: 200px;
+    transition: margin 0.5s ease-out;
+}
+
+.category-wrapper:hover .heading {
+    margin: 0 -10px 0 10px;
+}
+
+.category {
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-left: 0;
-    width: 60%;
-    visibility:hidden;
 }
 
-.row .active-column ul {
-    visibility:visible !important;
-}
-
-.row .column ul.sub {
-    position: absolute;
-    left: 20%;
-    margin: 15px 0 0;
-    background-color: #303030; 
-}
-
-.row .column ul a {
-    min-width: 25%;
-    list-style-type: none;
-    padding: 15px 0;
-    text-align: center;
+.link {
     text-decoration: none;
-    color: #CCCCCC;
-    -webkit-transition: 0.1s ease-out;
-    -moz-transition: 0.1s ease-out;
-    -ms-transition: 0.1s ease-out;
-    -o-transition: 0.1s ease-out;
-    transition: 0.1s ease-out; 
+    color: #888;
+    padding: 0 1rem 0.5rem;
+    transition: color 0.5s ease-out;
 }
 
-.active-column {
-    background-color: #303030 !important; 
-    z-index:1;
-    visibility:visible !important;
+.link:hover {
+    color: #CCC;
 }
 
-.row .column:hover ul a:hover {
-    background-color: #d0d0d0; 
-    color: #101010;
+@media (min-width: 900px) {
+    .content-container {
+        width: 900px;
+    }
 }
+

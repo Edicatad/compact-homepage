@@ -64,19 +64,20 @@ do
     # Add the menu columns
     sed -i.bak '
         /menus/ a\
-\        <div id="column" class="column '$COLUMNTYPE'" onClick="clickColumn(this)">\
-\            <span class="menu" data-menu-type="'$i'">'$i'</span>\
-\            <ul class="sub '$i'">\
-\            </ul>\
+\        <div class="fr category-wrapper '$COLUMNTYPE'">\
+\            <span class="heading" data-menu-type="'$i'">'$i'</span>\
+\            <div class="fr category '$i'">\
+\            </div>\
 \        </div>
     ' index.html
     PLACEHOLDER="$i[@]"
+    echo "Processing category $i"
     for j in "${!PLACEHOLDER}"
     do
         IFS='|' read -r -a CURRENTLINK <<< "$j"
         sed -i.bak '
-            /sub '$i'/ a\
-\                <a href="'${CURRENTLINK[1]}'">'${CURRENTLINK[0]}'</a>
+            /category '$i'/ a\
+\                <a class="link" href="'${CURRENTLINK[1]}'">'${CURRENTLINK[0]}'</a>
         ' index.html
     done
 done
