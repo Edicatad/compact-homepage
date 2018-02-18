@@ -1,0 +1,13 @@
+git:
+    depth: 3 # No intention of performing git-commands in the build
+
+install: true
+
+script: ./build.sh
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    on:
+        branch: master
